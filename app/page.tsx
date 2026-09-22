@@ -1,6 +1,7 @@
 import { About } from "@/components/About";
 import { Benefits } from "@/components/Benefits";
 import { FinalCTA } from "@/components/FinalCTA";
+import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { FreeEvaluation } from "@/components/FreeEvaluation";
 import { HairTreatment } from "@/components/HairTreatment";
@@ -9,6 +10,8 @@ import { Hero } from "@/components/Hero";
 import { Location } from "@/components/Location";
 import { Services } from "@/components/Services";
 import { WhatsappButton } from "@/components/WhatsappButton";
+import { FAQ_ITEMS } from "@/lib/faq";
+import { GOOGLE_BUSINESS_URL, INSTAGRAM_URL } from "@/lib/site";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -17,7 +20,7 @@ const structuredData = {
   name: "Patrícia Vianna Estilista Capilar",
   alternateName: "Espelho Meu by Patrícia Vianna",
   description:
-    "Estilista capilar em Alípio de Melo, Belo Horizonte, com atendimento personalizado para cortes, cachos, penteados, mechas sem descolorante, correção de cor e tratamentos capilares.",
+    "Patrícia Vianna é estilista capilar em Alípio de Melo, Belo Horizonte, com avaliação profissional para corte feminino, cachos, penteados, mechas sem descolorante, correção de cor e tratamento capilar.",
   url: "https://espelho-meu-patricia-bh.eduardosoarestonon.chatgpt.site",
   telephone: "+55 31 98735-8464",
   address: {
@@ -31,8 +34,8 @@ const structuredData = {
     "@type": "City",
     name: "Belo Horizonte",
   },
-  hasMap:
-    "https://www.google.com/maps/search/?api=1&query=Rua%20Cambori%C3%BA%2C%2028%2C%20Al%C3%ADpio%20de%20Melo%2C%20Belo%20Horizonte%20MG",
+  slogan: "Patrícia Vianna Estilista Capilar em Alípio de Melo",
+  hasMap: GOOGLE_BUSINESS_URL,
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+55 31 98735-8464",
@@ -55,7 +58,20 @@ const structuredData = {
     "@type": "Offer",
     itemOffered: { "@type": "Service", name },
   })),
-  sameAs: ["https://www.instagram.com/espelhomeubypatriciavianna"],
+  sameAs: [INSTAGRAM_URL, GOOGLE_BUSINESS_URL],
+};
+
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
 };
 
 export default function Home() {
@@ -70,12 +86,14 @@ export default function Home() {
         <HairTreatment />
         <FreeEvaluation />
         <About />
+        <FAQ />
         <Location />
         <FinalCTA />
       </main>
       <Footer />
       <WhatsappButton />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
     </>
   );
 }

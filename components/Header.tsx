@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { NAV_LINKS, WHATSAPP_URL } from "@/lib/site";
@@ -16,13 +17,11 @@ export function Header() {
   }, []);
 
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? "border-b border-brown/10 bg-background/95 shadow-[0_10px_35px_rgba(73,55,43,.07)] backdrop-blur-xl" : "bg-transparent"}`}>
+    <header className={`fixed inset-x-0 top-0 z-50 border-b border-brown/10 bg-background/95 shadow-[0_10px_35px_rgba(73,55,43,.07)] backdrop-blur-xl transition-all duration-300 lg:border-b-0 lg:bg-transparent lg:shadow-none ${scrolled ? "lg:border-b lg:border-brown/10 lg:bg-background/95 lg:shadow-[0_10px_35px_rgba(73,55,43,.07)] lg:backdrop-blur-xl" : ""}`}>
       <nav className="site-container flex h-[74px] items-center justify-between" aria-label="Navegação principal">
         <a href="#inicio" className="flex items-center gap-3 no-underline" onClick={() => setOpen(false)}>
-          <span className="grid size-8 rotate-45 place-items-center border border-gold/60 text-gold" aria-hidden="true"><span className="-rotate-45 text-[10px]">✦</span></span>
-          <span className="leading-none">
-            <strong className="block font-serif text-[16px] font-medium tracking-[.14em] text-brown sm:text-[18px] sm:tracking-[.16em]">ESPELHO MEU</strong>
-            <small className="mt-1.5 block text-[9px] tracking-[.14em] text-brown/60 sm:text-[10px] sm:tracking-[.16em]">PATRÍCIA VIANNA <span className="hidden sm:inline">· ESTILISTA CAPILAR</span></small>
+          <span className="relative block h-12 w-[156px] sm:w-[190px]">
+            <Image src="/logo.png" alt="Espelho Meu by Patrícia Vianna" fill priority sizes="190px" className="object-contain object-left" />
           </span>
         </a>
 

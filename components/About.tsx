@@ -12,8 +12,8 @@ export function About() {
           </div>
         </Reveal>
         <Reveal>
-          <SectionTitle eyebrow="Patrícia Vianna · Estilista Capilar" title="Seu cabelo merece atenção de verdade." />
-          <p className="mt-7 text-[17px] leading-8 text-ink/65">Na Espelho Meu by Patrícia Vianna, em Belo Horizonte, cada atendimento começa entendendo você e o seu cabelo. O objetivo é unir beleza, técnica e cuidado para valorizar sua identidade sem deixar de lado a saúde dos fios.</p>
+          <SectionTitle eyebrow="Patrícia Vianna · Estilista Capilar" title="Uma profissional para orientar seu cabelo, não só realizar um procedimento." />
+          <p className="mt-7 text-[17px] leading-8 text-ink/65">Na Espelho Meu, em Alípio de Melo, Patrícia se posiciona como estilista capilar para mulheres que querem se sentir bem com o próprio cabelo. A proposta é simples: entender sua identidade, cuidar da saúde dos fios e entregar um resultado bonito para a vida real.</p>
           <div className="mt-10 border-t border-brown/15 pt-7">
             <p className="font-serif text-2xl font-light text-gold">Patrícia Vianna</p>
             <small className="mt-1 block text-[11px] font-medium uppercase tracking-[.18em] text-brown/55">Estilista Capilar · Espelho Meu</small>

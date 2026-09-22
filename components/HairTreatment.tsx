@@ -4,7 +4,7 @@ import { WHATSAPP_URL } from "@/lib/site";
 import { Reveal } from "./Reveal";
 import { SectionTitle } from "./SectionTitle";
 
-const benefits = ["Cuidado para queda capilar", "Estímulo ao crescimento saudável", "Recuperação e fortalecimento dos fios"];
+const benefits = ["Entender a causa antes de indicar o cuidado", "Fortalecer fios frágeis e sem vida", "Criar uma rotina simples para manter o resultado"];
 
 export function HairTreatment() {
   return (
@@ -22,13 +22,13 @@ export function HairTreatment() {
         </Reveal>
 
         <Reveal className="order-1 lg:order-2">
-          <SectionTitle eyebrow="Tratamento Capilar Completo" title="Cuide da raiz para transformar os fios." light />
-          <p className="mt-7 max-w-xl text-[17px] leading-8 text-white/68">Um cuidado completo pensado para queda, crescimento e saúde dos fios.</p>
+          <SectionTitle eyebrow="Tratamento capilar" title="Fios fracos, queda ou cabelo sem vida? Comece pela avaliação." light />
+          <p className="mt-7 max-w-xl text-[17px] leading-8 text-white/68">Antes de fazer qualquer protocolo, Patrícia avalia o cabelo e o couro cabeludo para indicar um cuidado que faça sentido para você.</p>
           <ul className="mt-9 border-t border-white/15">
             {benefits.map((benefit) => <li key={benefit} className="flex items-center gap-4 border-b border-white/15 py-5"><span className="grid size-8 shrink-0 place-items-center rounded-full border border-gold-soft/50 text-gold-soft"><Check size={15} /></span><span className="font-serif text-lg font-light leading-7">{benefit}</span></li>)}
           </ul>
-          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="button-base button-light mt-9">Quero cuidar do meu cabelo</a>
-          <p className="mt-4 text-xs leading-5 text-white/45">Cada indicação é personalizada após a avaliação das necessidades dos fios e do couro cabeludo.</p>
+          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="button-base button-light mt-9">Quero uma avaliação capilar</a>
+          <p className="mt-4 text-xs leading-5 text-white/45">Indicação personalizada conforme a necessidade dos fios e do couro cabeludo.</p>
         </Reveal>
       </div>
     </section>

@@ -3,9 +3,9 @@ import { Reveal } from "./Reveal";
 import { SectionTitle } from "./SectionTitle";
 
 const benefits = [
-  { icon: HeartHandshake, title: "Atendimento personalizado", text: "Cada cabelo recebe uma avaliação e um cuidado pensado para suas necessidades." },
-  { icon: ShieldCheck, title: "Técnicas seguras", text: "Procedimentos realizados priorizando a saúde e a integridade dos fios." },
-  { icon: Sparkles, title: "Cuidado que você percebe", text: "Tratamentos e serviços pensados para devolver beleza, confiança e bem-estar." },
+  { icon: HeartHandshake, title: "Consultoria antes da técnica", text: "Como estilista capilar, Patrícia entende sua rotina, seu histórico e o resultado que você quer ver no espelho." },
+  { icon: ShieldCheck, title: "Beleza com estratégia", text: "Cada escolha de corte, cor ou tratamento é feita pensando no visual e também na saúde do cabelo." },
+  { icon: Sparkles, title: "Resultado com orientação", text: "Você sai sabendo como cuidar dos fios em casa e como manter o resultado bonito por mais tempo." },
 ];
 
 export function Benefits() {
@@ -14,8 +14,8 @@ export function Benefits() {
       <div className="site-container">
         <Reveal>
           <div className="grid items-end gap-8 lg:grid-cols-[1fr_.8fr]">
-            <SectionTitle eyebrow="Nossa forma de cuidar" title="Beleza começa na raiz e se reflete nos fios." />
-            <p className="max-w-xl text-[17px] leading-8 text-ink/65">Cada cabelo tem sua história, sua textura e suas necessidades. Por isso, cada atendimento é pensado individualmente para valorizar sua beleza natural e cuidar da saúde dos seus fios.</p>
+            <SectionTitle eyebrow="Posicionamento profissional" title="Mais que executar um serviço, Patrícia desenha o cuidado ideal para o seu cabelo." />
+            <p className="max-w-xl text-[17px] leading-8 text-ink/65">O atendimento começa com conversa e avaliação. Como estilista capilar, Patrícia entende o que você deseja, observa a saúde dos fios e indica o melhor caminho antes de realizar qualquer procedimento.</p>
           </div>
         </Reveal>
         <div className="mt-14 grid border-l border-t border-brown/15 md:grid-cols-3">

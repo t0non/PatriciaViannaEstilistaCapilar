@@ -3,16 +3,21 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://espelho-meu-patricia-bh.eduardosoarestonon.chatgpt.site"),
-  title: "Patrícia Vianna Estilista Capilar | Belo Horizonte",
+  title: "Patrícia Vianna Estilista Capilar em Alípio de Melo | Belo Horizonte",
   description:
-    "Cortes, cachos, mechas, correção de cor, penteados e tratamentos capilares com Patrícia Vianna, estilista capilar em Alípio de Melo, Belo Horizonte.",
+    "Agende com Patrícia Vianna Estilista Capilar em Alípio de Melo, Belo Horizonte. Corte feminino, cachos, penteados, cor e tratamento capilar com avaliação profissional.",
   keywords: [
     "Patrícia Vianna estilista capilar",
     "estilista capilar em Belo Horizonte",
-    "cabeleireira em Belo Horizonte",
-    "cabeleireira no Alípio de Melo",
+    "estilista capilar Alípio de Melo",
+    "Patrícia Vianna Alípio de Melo",
+    "Patrícia Vianna Belo Horizonte",
+    "estilista de cabelo Belo Horizonte",
     "salão de beleza Alípio de Melo",
+    "corte feminino Alípio de Melo",
+    "tratamento capilar Alípio de Melo",
     "tratamento capilar Belo Horizonte",
+    "mechas sem descolorante Belo Horizonte",
     "corte feminino",
     "cachos",
     "mechas sem descolorante",
@@ -24,15 +29,16 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Patrícia Vianna Estilista Capilar | Belo Horizonte",
-    description: "Cuidado personalizado para cortes, cachos, mechas, correção de cor, penteados e tratamentos capilares em Alípio de Melo, Belo Horizonte.",
+    title: "Patrícia Vianna Estilista Capilar em Alípio de Melo",
+    description: "Patrícia Vianna Estilista Capilar em Belo Horizonte, com avaliação gratuita para novas clientes, corte feminino, cachos, cor, penteados e tratamentos.",
     type: "website",
     locale: "pt_BR",
     siteName: "Espelho Meu by Patrícia Vianna",
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
 };
 
