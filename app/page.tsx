@@ -61,7 +61,7 @@ const structuredData = {
 export default function Home() {
   return (
     <>
-      <a href="#conteudo" className="fixed -top-20 left-4 z-[100] bg-brown px-4 py-2 text-sm font-bold text-white focus:top-0">Ir para o conteúdo</a>
+      <a href="#conteudo" className="fixed -top-20 left-4 z-[100] bg-brown px-4 py-2 text-sm font-medium text-white focus:top-0">Ir para o conteúdo</a>
       <Header />
       <main id="conteudo">
         <Hero />

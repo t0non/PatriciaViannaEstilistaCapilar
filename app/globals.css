@@ -2,6 +2,38 @@
 @import "tw-animate-css";
 @import "../vendor/shadcn-tailwind-4.13.0.css";
 
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/poppins-300.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/poppins-400.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/poppins-500.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/poppins-600.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
 :root {
   --background: #faf6ee;
   --foreground: #342a23;
@@ -25,10 +57,13 @@
   --olive: #556747;
   --champagne: #f3e9d8;
   --gold: #b38a45;
+  --gold-soft: #e4c98f;
   --brown: #49372b;
   --ink: #342a23;
-  --font-serif: "Bodoni MT", Didot, "Times New Roman", serif;
-  --font-sans: Inter, Aptos, "Segoe UI", Arial, sans-serif;
+  --font-serif: "Poppins", "Segoe UI", sans-serif;
+  --font-sans: "Poppins", "Segoe UI", sans-serif;
+  --section-space: clamp(5.5rem, 9vw, 8.5rem);
+  --content-width: min(1180px, calc(100% - 32px));
 }
 
 @theme inline {
@@ -53,6 +88,7 @@
   --color-olive: var(--olive);
   --color-champagne: var(--champagne);
   --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
   --color-brown: var(--brown);
   --color-ink: var(--ink);
   --radius-sm: calc(var(--radius) - 3px);
@@ -70,8 +106,10 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  font-weight: 300;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.75;
+  letter-spacing: 0;
 }
 body::before {
   content: "";
@@ -83,9 +121,49 @@ body::before {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E");
 }
 a, button { -webkit-tap-highlight-color: transparent; }
+h1, h2, h3 {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  text-wrap: balance;
+}
+p { text-wrap: pretty; }
+strong, b { font-weight: 500; }
 ::selection { background: #e4cfa9; color: #342a23; }
 :focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
 .hairline { height: 1px; background: linear-gradient(90deg, transparent, #b38a45, transparent); }
+
+.section-space { padding-block: var(--section-space); }
+.site-container { width: var(--content-width); margin-inline: auto; }
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.button-base {
+  display: inline-flex;
+  min-height: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+  transition: color 220ms ease, background-color 220ms ease, border-color 220ms ease, transform 220ms ease;
+}
+
+.button-base:hover { transform: translateY(-2px); }
+.button-primary { background: var(--brown); color: #fff; }
+.button-primary:hover { background: var(--olive); }
+.button-secondary { border: 1px solid rgba(73, 55, 43, 0.25); color: var(--brown); }
+.button-secondary:hover { border-color: var(--gold); color: var(--gold); }
+.button-light { background: var(--background); color: var(--brown); }
+.button-light:hover { background: #fff; }
 
 .reveal {
   opacity: 0;

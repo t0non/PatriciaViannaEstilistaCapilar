@@ -14,20 +14,20 @@ const services = [
 
 export function Services() {
   return (
-    <section id="servicos" className="scroll-mt-20 bg-[#FAF6EE] py-24 sm:py-28 lg:py-36">
-      <div className="mx-auto w-[min(1180px,calc(100%-32px))]">
+    <section id="servicos" className="section-space scroll-mt-20 bg-background">
+      <div className="site-container">
         <Reveal><SectionTitle eyebrow="Serviços" title="Cuidados para cada momento do seu cabelo" description="Do corte ao tratamento capilar, encontre o cuidado ideal para seus fios." /></Reveal>
         <div className="mt-14 grid gap-px bg-brown/15 border border-brown/15 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
-            <Reveal key={service.name} delay={(index % 3) * 80} className="h-full bg-[#FAF6EE]">
-              <article className="group flex h-full min-h-[330px] flex-col bg-[#FAF6EE] p-7 transition duration-300 hover:bg-white sm:p-9">
+            <Reveal key={service.name} delay={(index % 3) * 80} className="h-full bg-background">
+              <article className="group flex h-full min-h-[330px] flex-col bg-background p-8 transition duration-300 hover:bg-white sm:p-10">
                 <div className="flex items-start justify-between">
                   <service.icon size={34} strokeWidth={1.25} className="text-olive" />
-                  <span className="text-[11px] font-bold tracking-[.18em] text-gold">0{index + 1}</span>
+                  <span className="text-[11px] font-medium tracking-[.18em] text-gold">0{index + 1}</span>
                 </div>
-                <h3 className="mt-12 font-serif text-[28px] font-normal leading-[1.08] text-brown">{service.name}</h3>
+                <h3 className="mt-12 font-serif text-[26px] font-light leading-[1.22] text-brown">{service.name}</h3>
                 <p className="mt-4 flex-1 text-[15px] leading-7 text-ink/62">{service.text}</p>
-                <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="mt-7 inline-flex w-fit items-center border-b border-brown/35 pb-1 text-sm font-bold text-brown transition group-hover:border-gold group-hover:text-gold">Quero agendar <span aria-hidden="true" className="ml-2">↗</span></a>
+                <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="mt-7 inline-flex w-fit items-center border-b border-brown/35 pb-1 text-sm font-medium text-brown transition group-hover:border-gold group-hover:text-gold">Quero agendar <span aria-hidden="true" className="ml-2">↗</span></a>
               </article>
             </Reveal>
           ))}

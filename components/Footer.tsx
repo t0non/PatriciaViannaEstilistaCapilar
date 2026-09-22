@@ -5,16 +5,16 @@ export function Footer() {
     <footer className="bg-brown pb-24 pt-16 text-white sm:pb-8">
       <div className="mx-auto grid w-[min(1180px,calc(100%-32px))] gap-10 border-b border-white/12 pb-12 md:grid-cols-[1fr_1fr_auto]">
         <div>
-          <strong className="block font-serif text-2xl font-normal tracking-[.14em]">ESPELHO MEU</strong>
+          <strong className="block font-serif text-2xl font-medium tracking-[.14em]">ESPELHO MEU</strong>
           <small className="mt-2 block text-[10px] tracking-[.16em] text-white/50">PATRÍCIA VIANNA · ESTILISTA CAPILAR</small>
         </div>
         <div className="text-sm leading-7 text-white/60">
           <p>Rua Camboriú, 28 — Alípio de Melo<br />Belo Horizonte — MG</p>
-          <p className="mt-3"><a href="tel:+5531987358464" className="hover:text-[#E4C98F]">(31) 98735-8464</a><br /><a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-[#E4C98F]">@espelhomeubypatriciavianna</a></p>
+          <p className="mt-3"><a href="tel:+5531987358464" className="hover:text-gold-soft">(31) 98735-8464</a><br /><a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-gold-soft">@espelhomeubypatriciavianna</a></p>
         </div>
         <nav className="flex flex-col gap-2 text-sm" aria-label="Links do rodapé">
-          {NAV_LINKS.map(([label, href]) => <a key={href} href={href} className="text-white/65 hover:text-[#E4C98F]">{label}</a>)}
-          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="mt-2 text-[#E4C98F]">Agendar horário</a>
+          {NAV_LINKS.map(([label, href]) => <a key={href} href={href} className="text-white/65 hover:text-gold-soft">{label}</a>)}
+          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="mt-2 text-gold-soft">Agendar horário</a>
         </nav>
       </div>
       <div className="mx-auto flex w-[min(1180px,calc(100%-32px))] flex-col gap-3 pt-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
